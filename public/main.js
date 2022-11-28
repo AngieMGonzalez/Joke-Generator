@@ -13,8 +13,10 @@ const init = () => {
 init();
 
 const theButton = document.querySelector('#click-me');
-const theSetup = document.querySelector('#the-setup'); // jokeText
+const theSetup = document.querySelector('#the-setup');
 const thePunchLine = document.querySelector('#the-punch-line');
+
+// https://www.youtube.com/watch?v=I1Gpqy_jNNQ 2min. in.
 
 const getJoke = () => {
   jokePromise().then((mytaco) => {
