@@ -1,16 +1,13 @@
 import 'bootstrap';
 import '../styles/main.scss';
 import jokePromise from '../api/jokepromise';
+import init from '../components/mainpage';
 
-const init = () => {
-  document.querySelector('#app').innerHTML = `
-  <h1> Let's Yoke Around </h1>
-  <div class = "joke" id = "the-setup" ></div>
-  <div id = "the-punch-line" class="text-muted"> Click to get a Joke</div>
-  <button class="btn btn-danger" id="click-me">Get a Punny Joke!</button>
-  `;
+const startApp = () => {
+  init();
 };
-init();
+
+startApp();
 
 const theButton = document.querySelector('#click-me');
 const theSetup = document.querySelector('#the-setup');
