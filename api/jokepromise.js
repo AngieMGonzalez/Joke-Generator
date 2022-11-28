@@ -1,5 +1,7 @@
-const getjoke = () => new Promise((resolve, reject) => {
-  fetch('https://v2.jokeapi.dev/joke/Any?type=twopart', {
+const endPoint = 'https://v2.jokeapi.dev/joke/Any?safe-modetype=twopart';
+
+const jokePromise = () => new Promise((resolve, reject) => {
+  fetch(endPoint, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -10,4 +12,4 @@ const getjoke = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export default getjoke;
+export default jokePromise;
